@@ -47,8 +47,7 @@ function start_move() {
     },1)
 
     pipe_interval = setInterval(function() {
-        var num = 1+Math.random()*(bodyHeight/2);
-        var pipe_height = JSON.stringify(num);
+        var pipe_height= 1+Math.random()*(bodyHeight/2);
         if ($('#up_pipe').css('left') == bodyWidth+'px' && $('#down_pipe').css('left') == bodyWidth+'px') {
             $('#up_pipe').animate({left: -pipeWidth+'px'}, 3500,'linear',function() {
                 point = point + 1;
@@ -58,21 +57,21 @@ function start_move() {
             });
             $('#down_pipe').animate({left: -pipeWidth+'px'}, 3500,'linear',function() {
                 $('#down_pipe').css('left',bodyWidth+'px');
-                var down_pipe_height = bodyHeight*2/3-num;
-                $('#down_pipe').css('height',JSON.stringify(down_pipe_height)+'px');
+                var down_pipe_height = bodyHeight*2/3-pipe_height;
+                $('#down_pipe').css('height',down_pipe_height+'px');
             });
         }
     },100);
 }
 
 var displacement = function(v,t) {
-    var vs
+    var dispance
     if( v - g*t/2 > 0) {
-        vs = 1*g*t/2 - v
+        dispance = g*t/2 - v
     }else {
-        vs = g*t/40
+        dispance = g*t/40
     }
-    return vs
+    return dispance
 }
 
 function fly() {
@@ -88,7 +87,6 @@ function fly() {
 
 function game_over() {
     var ux = $('#up_pipe').offset().left;
-    var dx = $('#down_pipe').offset().left;
     var dy = $('#down_pipe').offset().top;
     var bx = $('#bird').offset().left;
     var by = $('#bird').offset().top;
