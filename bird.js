@@ -93,8 +93,8 @@ function game_over() {
     var bx = $('#bird').offset().left;
     var by = $('#bird').offset().top;
 
-    if((bx > ux && bx < ux+pipeWidth && by < dy-pipeSpace)||(bx+birdWidth > ux && bx+birdWidth < ux+pipeWidth && by < dy-pipeSpace)||
-        (bx > dx && bx < dx+pipeWidth && by+birdHeight > dy)||(bx+birdWidth >dx && bx+birdWidth < dx+pipeWidth && by+birdHeight >dy)||
+    if((bx > ux && bx < ux+pipeWidth && (by < dy-pipeSpace || by+birdHeight > dy))||
+        (bx+birdWidth-10 > ux && bx+birdWidth-10 < ux+pipeWidth && (by < dy-pipeSpace || by+birdHeight >dy))||
         (by > all_height)){
         clearInterval(interval);
         clearInterval(pipe_interval);
