@@ -44,8 +44,8 @@
       <file leaf-file-name="bird.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bird.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27125943">
-              <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.3444564">
+              <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
               <folding>
                 <element signature="n#!!block;n#bird_fly#0" expanded="false" />
               </folding>
@@ -512,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bird.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27125943">
-          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.3444564">
+          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
           <folding>
             <element signature="n#!!block;n#bird_fly#0" expanded="false" />
           </folding>

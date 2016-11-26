@@ -50,13 +50,13 @@ function start_move() {
         var num = 1+Math.random()*(bodyHeight/2);
         var pipe_height = JSON.stringify(num);
         if ($('#up_pipe').css('left') == bodyWidth+'px' && $('#down_pipe').css('left') == bodyWidth+'px') {
-            $('#up_pipe').animate({left: -pipeWidth+'px'}, 4000,'linear',function() {
+            $('#up_pipe').animate({left: -pipeWidth+'px'}, 3500,'linear',function() {
                 point = point + 1;
                 $('#point').html(point);
                 $('#up_pipe').css('left',bodyWidth+'px');
                 $('#up_pipe').css('height',pipe_height+'px');
             });
-            $('#down_pipe').animate({left: -pipeWidth+'px'}, 4000,'linear',function() {
+            $('#down_pipe').animate({left: -pipeWidth+'px'}, 3500,'linear',function() {
                 $('#down_pipe').css('left',bodyWidth+'px');
                 var down_pipe_height = bodyHeight*2/3-num;
                 $('#down_pipe').css('height',JSON.stringify(down_pipe_height)+'px');
@@ -94,7 +94,8 @@ function game_over() {
     var by = $('#bird').offset().top;
 
     if((bx > ux && bx < ux+pipeWidth && by < dy-pipeSpace)||(bx+birdWidth > ux && bx+birdWidth < ux+pipeWidth && by < dy-pipeSpace)||
-        (bx > dx && bx < dx+pipeWidth && by+birdHeight > dy)||(bx+birdWidth >dx && bx+birdWidth < dx+pipeWidth && by+birdHeight >dy)){
+        (bx > dx && bx < dx+pipeWidth && by+birdHeight > dy)||(bx+birdWidth >dx && bx+birdWidth < dx+pipeWidth && by+birdHeight >dy)||
+        (by > all_height)){
         clearInterval(interval);
         clearInterval(pipe_interval);
         clearInterval(bird_interval);
